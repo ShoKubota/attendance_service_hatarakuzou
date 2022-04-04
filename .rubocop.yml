@@ -1,0 +1,39 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  TargetRubyVersion: 3.0
+  NewCops: enable
+  Exclude:
+    - 'bin/**'
+    - "lib/**/*"
+    - "spec/**/*"
+    - 'node_modules/**/*'
+    - 'config/**/*'
+    - 'config.ru'
+    - 'db/schema.rb'
+    - 'db/seeds.rb'
+    - 'Gemfile'
+    - 'brackets'
+    - 'use_perl_names'
+
+Style/Documentation:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 200
+
+Metrics/AbcSize:
+  Max: 35
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 30
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
