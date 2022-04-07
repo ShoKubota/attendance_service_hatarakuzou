@@ -31,6 +31,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # Model
 gem 'enum_help'
 
+#Internationalization
+gem 'rails-i18n'
+
 # Slim
 gem 'slim-rails'
 gem 'html2slim'
