@@ -31,6 +31,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # Model
 gem 'enum_help'
 
+# faker
+gem 'faker'
+
 #Internationalization
 gem 'rails-i18n'
 
