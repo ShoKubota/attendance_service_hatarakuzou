@@ -9,3 +9,4 @@
           th.text-left.p-3.px-5 = t('activerecord.attributes.user.salary')
           th.text-left.p-3.px-5 = t('activerecord.attributes.user.role')
         = render @users
+        = paginate @users 
