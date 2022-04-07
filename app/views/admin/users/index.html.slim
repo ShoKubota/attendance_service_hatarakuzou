@@ -1,3 +1,11 @@
-.bg-green-500
-  h1.text-3xl.text-red-500 Admin::User#index
-  p Find me in app/views/admin/user/index.html.slim
+.w-5/6.right-0.absolute
+  .section.mx-8.pt-8
+    h1.font-semibold.text-3xl 従業員管理
+    table.w-full.text-md.bg-white.shadow-md.rounded.my-4
+      tbody
+        tr.border-b
+          th.text-left.p-3.px-5 = t('activerecord.attributes.user.name')
+          th.text-left.p-3.px-5 = t('activerecord.attributes.user.email')
+          th.text-left.p-3.px-5 = t('activerecord.attributes.user.salary')
+          th.text-left.p-3.px-5 = t('activerecord.attributes.user.role')
+        = render @users
