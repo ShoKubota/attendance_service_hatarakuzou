@@ -31,9 +31,21 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # Model
 gem 'enum_help'
 
+# faker
+gem 'faker'
+
+#Internationalization
+gem 'rails-i18n'
+
 # Slim
 gem 'slim-rails'
 gem 'html2slim'
+
+# Signup Login
+gem 'sorcery'
+
+# Pagination
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,0 +1,17 @@
+= form_with model: user, url: admin_user_path(user), local: true do |f|
+  = render 'admin/shared/error_messages', object: f.object
+  .flex.flex-col.m-7
+    .mb-6
+      = f.label :name, class: 'block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300'
+      = f.text_field :name, class: 'border-2 border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+    .mb-6
+      = f.label :email, class: 'block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300'
+      = f.text_field :email, class: 'border-2 border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+    .mb-6
+      = f.label :salary, class: 'block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300'
+      = f.number_field :salary, step: 100, value: 1000, class: 'border-2 border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+    .mb-6
+      = f.label :role, class: 'block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300'
+      = f.select :role, User.roles_i18n.invert, class: 'border-2 border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+    .text-center
+      = f.button '更新する', class: 'text-white bg-accent-red rounded-full hover:bg-light-red font-semibold text-base px-5 py-2.5 text-center mr-2 shadow-md cursor-pointer w-1/3'

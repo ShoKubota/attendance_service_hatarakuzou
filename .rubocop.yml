@@ -5,8 +5,8 @@ AllCops:
   NewCops: enable
   Exclude:
     - 'bin/**'
-    - "lib/**/*"
-    - "spec/**/*"
+    - 'lib/**/*'
+    - 'spec/**/*'
     - 'node_modules/**/*'
     - 'config/**/*'
     - 'config.ru'
@@ -15,6 +15,7 @@ AllCops:
     - 'Gemfile'
     - 'brackets'
     - 'use_perl_names'
+    - 'app/channels/**/*'
 
 Style/Documentation:
   Enabled: false
@@ -37,3 +38,6 @@ Metrics/CyclomaticComplexity:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
