@@ -11,8 +11,8 @@ class User < ApplicationRecord
   validates :salary, presence: true
   validates :role, presence: true
 
-  enum role: { 
-    general: 0, 
+  enum role: {
+    general: 0,
     admin: 1
   }
 end
