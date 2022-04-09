@@ -1,0 +1,11 @@
+= form_with url: admin_login_path, method: :post, local: true do |f|
+  .flex.flex-col.m-7
+    .mb-6
+      = f.label :email, 'メールアドレス', class: 'block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300'
+      = f.text_field :email, size: 30, class: 'border-b-2 border-gray-400 text-gray-900 text-sm py-2.5 px-32'
+    .mb-6
+      = f.label :password, 'パスワード', class: 'block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300'
+      = f.text_field :password, size: 30, type: 'password', class: 'border-b-2 border-gray-400 text-gray-900 text-sm py-2.5 px-32'
+    .mb-6
+      .text-center
+        = f.button 'ログインする', class: 'text-white bg-light-green rounded-full hover:bg-main-green font-semibold text-base px-5 py-2.5 text-center mr-2 shadow-md cursor-pointer w-1/3'
