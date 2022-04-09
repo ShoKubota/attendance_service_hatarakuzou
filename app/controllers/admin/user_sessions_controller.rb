@@ -1,4 +1,7 @@
-class Admin::UserSessionsController < ApplicationController
+class Admin::UserSessionsController < Admin::BaseController
+  skip_before_action :admin_user, only: %i[new create]
+  skip_before_action :require_login, only: %i[new create]
+
   layout 'admin/layouts/admin_login'
 
   def new; end
