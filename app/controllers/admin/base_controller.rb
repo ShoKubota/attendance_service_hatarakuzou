@@ -12,9 +12,9 @@ class Admin::BaseController < ApplicationController
 
   def admin_user
     # adminでない場合は、ログインページへリダイレクトさせる
-    unless current_user.admin?
-      flash[:danger] = '管理者のみ閲覧できます'
-      redirect_to admin_login_path
-    end
+    return if current_user.admin?
+
+    flash[:danger] = '管理者のみ閲覧できます'
+    redirect_to admin_login_path
   end
 end
