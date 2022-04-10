@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_04_114449) do
+ActiveRecord::Schema.define(version: 2022_04_10_131250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "attendances", force: :cascade do |t|
-    t.datetime "start_time", null: false
-    t.datetime "end_time", null: false
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "break_start"
     t.datetime "break_end"
     t.boolean "status", default: false
