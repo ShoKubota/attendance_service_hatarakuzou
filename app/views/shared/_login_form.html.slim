@@ -1,5 +1,5 @@
-= form_with url: admin_login_path, method: :post, local: true do |f|
-  .flex.flex-col.m-7
+= form_with url: url, method: :post, local: true do |f|
+  .flex.flex-col.m-7.border.p-5.rounded-lg.shadow.bg-white
     .mb-6
       = f.label :email, 'メールアドレス', class: 'block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300'
       = f.text_field :email, size: 30, class: 'border-b-2 border-gray-400 text-gray-900 text-sm py-2.5 px-32'
