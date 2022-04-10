@@ -14,8 +14,10 @@ class Admin::UsersController < Admin::BaseController
   def create
     @user = User.new(user_params)
     if @user.save
+      flash[:success] = 'ユーザーを作成しました'
       redirect_to admin_users_path
     else
+      flash.now[:danger] = 'ユーザーの作成に失敗しました'
       render :new
     end
   end
@@ -24,8 +26,10 @@ class Admin::UsersController < Admin::BaseController
 
   def update
     if @user.update(user_params)
+      flash[:success] = 'ユーザーを更新しました'
       redirect_to admin_users_path
     else
+      flash.now[:danger] = 'ユーザーの更新に失敗しました'
       render :edit
     end
   end

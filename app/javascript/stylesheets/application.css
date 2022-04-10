@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.danger{
+  @apply text-white z-10 mt-5 rounded-lg py-5 px-10 absolute right-10 shadow bg-red-300;
+}
+
+.success{
+  @apply text-white z-10 mt-5 rounded-lg py-5 px-10 absolute right-10 shadow bg-green-300;
+}
