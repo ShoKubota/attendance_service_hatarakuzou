@@ -1,0 +1,7 @@
+tr.border-b.hover:bg-orange-100.bg-slate-100
+  td.p-3.px-5 = unapproved_attendance.user.name
+  td.p-3.px-5 = unapproved_attendance.start_time
+  td.p-3.px-5 = unapproved_attendance.end_time
+  td.p-3.px-5
+    = link_to '承認', '#', class: 'mr-3 text-white bg-blue-400 hover:bg-blue-300 px-4 py-2 rounded-lg'
+    = link_to '削除', '#', class: 'mr-3 text-white bg-red-400 hover:bg-red-300 px-4 py-2 rounded-lg'

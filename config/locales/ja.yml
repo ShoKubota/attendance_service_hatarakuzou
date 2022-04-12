@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       user: 'ユーザー'
+      attendance: '勤怠'
     attributes:
       user:
         name: '名前'
@@ -10,8 +11,16 @@ ja:
         password_confirmation: 'パスワード（確認）'
         salary: '時給'
         role: '権限'
+      attendance:
+        start_time: '出勤時間'
+        end_time: '退勤時間'
+        status: '承認ステータス'
   enums:
     user:
       role:
         general: '従業員'
         admin: '管理者'
+    attendance:
+      status:
+        unapproved: '未承認'
+        approved: '承認'

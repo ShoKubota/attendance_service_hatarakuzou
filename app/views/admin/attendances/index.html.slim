@@ -1,6 +1,8 @@
 .w-5/6.right-0.absolute
   .section.mx-8.pt-8
     h1.font-semibold.text-3xl.mb-10 勤怠管理
+    .mb-10
+      = link_to '未承認ステータスはこちら', approve_admin_attendances_path, class: 'px-4 py-4 bg-light-green hover:bg-main-green text-white rounded-lg '
     = month_calendar(events: @attendances) do |date, attendances|
       = date
       - attendances.each do |attendance|
