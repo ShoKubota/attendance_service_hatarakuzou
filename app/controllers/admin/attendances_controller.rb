@@ -7,6 +7,5 @@ class Admin::AttendancesController < Admin::BaseController
     @attendance = Attendance.find(params[:id])
   end
 
-  def approve
-  end
+  def approve; end
 end
