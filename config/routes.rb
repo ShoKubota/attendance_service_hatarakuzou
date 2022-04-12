@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
+  root 'user_sessions#new'
   get '/login', to: 'user_sessions#new'
   post '/login', to: 'user_sessions#create'
   delete '/logout', to: 'user_sessions#destroy'
+  resources :attendances, only: %i[index new edit update destroy] do
+    collection do
+      post 'clockin'
+      post 'clockout'
+    end
+  end
   namespace :admin do
     get '/login', to: 'user_sessions#new'
     post '/login', to: 'user_sessions#create'

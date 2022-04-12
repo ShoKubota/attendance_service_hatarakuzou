@@ -1,0 +1,20 @@
+- if logged_in?
+  header
+    nav.fixed.w-full.text-white.bg-light-green.py-3.px-4.md:px-16.md:flex.md:items-center.md:justify-between
+      div.flex.justify-between
+        = link_to root_path, class: "font-bold cursor-pointer flex" do
+          = image_tag('logo.png', size: '25x25')
+          p.ml-2.font-semibold.text-lg ハタラクゾウ
+      ul.md:flex.md:items-center.md:static.md:w-auto.md:py-0.md:pl-0.hidden
+        li.mx-4.my-6.md:my-0.flex
+          svg.h-6.w-6 fill="none" stroke="white" stroke-width="2" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg" 
+            path d=("M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4") stroke-linecap="round" stroke-linejoin="round" 
+          = link_to '出勤する', new_attendance_path, class: 'text-white ml-2 text-base'
+        li.mx-4.my-6.md:my-0.flex
+          svg.h-6.w-6 fill="none" stroke="white" stroke-width="2" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg" 
+            path d=("M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z") stroke-linecap="round" stroke-linejoin="round" 
+          = link_to '勤怠確認', attendances_path, class: 'text-white ml-2 text-base'
+        li.mx-4.my-6.md:my-0.flex
+          svg.h-6.w-6 fill="none" stroke="#FFFFFF" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg" 
+            path d=("M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1") stroke-linecap="round" stroke-linejoin="round" 
+          = link_to 'ログアウト', logout_path, method: :delete, class: 'text-white font-semibold cursor-pointer ml-2 text-base'

@@ -1,0 +1,7 @@
+.section.mx-8.pt-8
+  p.mt-20.text-center.text-5xl id="currentTime"
+  .flex.flex-col.text-center.items-center.my-20
+    - if @current_user_last_attendance.clock_in?
+      = link_to '退勤する', clockout_attendances_path, method: :post, class: 'text-white bg-accent-red hover:bg-light-red px-10 py-2 rounded-lg'
+    - else
+      = link_to '出勤する', clockin_attendances_path, method: :post,  class: 'text-white bg-light-green hover:bg-main-green px-10 py-2 rounded-lg mb-10'

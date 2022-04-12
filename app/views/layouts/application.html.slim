@@ -9,6 +9,7 @@ html
     = stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-  body.bg-gray-100
+  body.bg-gray-100.text-gray-600
+    = render 'shared/header'
     = render 'shared/flash_message'
     = yield
