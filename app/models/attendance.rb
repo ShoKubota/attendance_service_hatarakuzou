@@ -13,9 +13,9 @@ class Attendance < ApplicationRecord
 
   def status_color
     if status == 'approved'
-      return 'bg-light-green'
-    elsif status == 'unapproved'
-      return 'bg-accent-red'
+      'bg-light-green'
+    else
+      'bg-accent-red'
     end
   end
 end
