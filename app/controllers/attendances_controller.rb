@@ -3,6 +3,7 @@ class AttendancesController < ApplicationController
   end
 
   def new
+    @current_user_last_attendance = current_user.attendances.last.decorate
   end
   
   def clockin
