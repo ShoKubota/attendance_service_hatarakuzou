@@ -2,7 +2,7 @@ class AttendancesController < ApplicationController
   def index; end
 
   def new
-    @current_user_last_attendance = current_user.attendances.last.decorate
+    @current_user_last_attendance = current_user.attendances.last
   end
 
   def clockin
