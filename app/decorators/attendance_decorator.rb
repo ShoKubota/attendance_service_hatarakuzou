@@ -10,13 +10,8 @@ class AttendanceDecorator < Draper::Decorator
   #     end
   #   end
 
-  def is_clock_in?
+  def clock_in?
     # 勤怠情報で出勤しているかどうか判定するメソッド
-    if start_time.present? && end_time.nil?
-      return true
-    else
-      return false
-    end
+    start_time.present? && end_time.nil?
   end
-
 end
