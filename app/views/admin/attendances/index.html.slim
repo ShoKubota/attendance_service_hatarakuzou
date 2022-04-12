@@ -5,4 +5,4 @@
       = date
       - attendances.each do |attendance|
         div
-          = attendance.user.name
+          = link_to "#{attendance.user.name} #{attendance.start_time.hour}時〜", admin_attendance_path(attendance)

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :attendances, only: %i[index] do
+    resources :attendances, only: %i[index show] do
       collection do
         get 'approve'
       end
