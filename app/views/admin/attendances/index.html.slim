@@ -7,4 +7,4 @@
       = date
       - attendances.each do |attendance|
         div
-          = link_to "#{attendance.user.name} #{attendance.start_time.hour}時〜", admin_attendance_path(attendance)
+          = link_to "#{attendance.user.name} #{attendance.start_time.hour}時〜", admin_attendance_path(attendance), class: "#{attendance.status_color} text-white rounded-lg px-2"

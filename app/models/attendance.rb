@@ -10,4 +10,12 @@ class Attendance < ApplicationRecord
     # 勤怠情報で出勤しているかどうか判定するメソッド
     start_time.present? && end_time.nil?
   end
+
+  def status_color
+    if status == 'approved'
+      return 'bg-light-green'
+    elsif status == 'unapproved'
+      return 'bg-accent-red'
+    end
+  end
 end
