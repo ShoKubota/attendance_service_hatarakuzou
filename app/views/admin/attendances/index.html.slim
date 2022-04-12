@@ -1,0 +1,8 @@
+.w-5/6.right-0.absolute
+  .section.mx-8.pt-8
+    h1.font-semibold.text-3xl.mb-10 勤怠管理
+    = month_calendar(events: @attendances) do |date, attendances|
+      = date
+      - attendances.each do |attendance|
+        div
+          = attendance.user.name

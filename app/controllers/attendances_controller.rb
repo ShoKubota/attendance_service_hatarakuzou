@@ -1,5 +1,7 @@
 class AttendancesController < ApplicationController
-  def index; end
+  def index
+    @attendances = Attendance.includes(:user).all
+  end
 
   def new
     @current_user_last_attendance = current_user.attendances.last
