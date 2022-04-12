@@ -8,3 +8,4 @@
       h3.font-semibold.text-2xl.mb-10 退勤時間
       = "#{@attendance.end_time.hour}時 #{@attendance.end_time.min}分"
     h3.font-semibold.text-2xl.mb-10 承認ステータス
+    = "#{@attendance.status_i18n}"
