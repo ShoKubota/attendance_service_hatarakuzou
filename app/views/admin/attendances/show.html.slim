@@ -1,0 +1,10 @@
+.w-5/6.right-0.absolute
+  .section.mx-8.pt-8
+    h1.font-semibold.text-3xl.mb-10 = "#{@attendance.user.name}さん　#{@attendance.created_at.month}月#{@attendance.created_at.day}日の勤怠詳細"
+    .mb-10
+      h3.font-semibold.text-2xl.my-10 出勤時間
+      = "#{@attendance.start_time.hour}時 #{@attendance.start_time.min}分"
+    .mb-10
+      h3.font-semibold.text-2xl.mb-10 退勤時間
+      = "#{@attendance.end_time.hour}時 #{@attendance.end_time.min}分"
+    h3.font-semibold.text-2xl.mb-10 承認ステータス

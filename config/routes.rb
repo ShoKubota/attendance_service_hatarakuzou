@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :attendances, only: %i[index show] do
+      collection do
+        get 'approve'
+      end
+    end
+  end
   root 'user_sessions#new'
   get '/login', to: 'user_sessions#new'
   post '/login', to: 'user_sessions#create'
