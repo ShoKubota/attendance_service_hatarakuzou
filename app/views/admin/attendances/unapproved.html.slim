@@ -1,0 +1,10 @@
+.w-5/6.right-0.absolute
+  .section.mx-8.pt-8
+    h1.font-semibold.text-3xl.mb-10 未承認ステータス一覧
+    table.w-full.text-md.bg-slate-100.shadow-md.rounded.my-4
+      tbody
+        tr.border-b
+          th.text-left.p-3.px-5 = t('activerecord.attributes.user.name')
+          th.text-left.p-3.px-5 = t('activerecord.attributes.attendance.start_time')
+          th.text-left.p-3.px-5 = t('activerecord.attributes.attendance.end_time')
+        = render partial: 'unapproved_attendance', collection: @unapproved_attendances

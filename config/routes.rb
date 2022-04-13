@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :attendances, only: %i[index show] do
       collection do
-        get 'approve'
+        get 'unapproved'
+      end
+      member do
+        post 'approve'
       end
     end
   end
