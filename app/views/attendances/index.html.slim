@@ -1,0 +1,14 @@
+.section.mx-8.pt-8
+  h1.font-semibold.text-3xl.my-10 勤怠一覧
+  .mb-10 
+    p
+      span.px-2.bg-light-green.text-white.rounded-lg 青色
+      | ・・・承認済み
+    p
+      span.px-2.bg-accent-red.text-white.rounded-lg 赤色
+      | ・・・未承認
+  = month_calendar(events: @attendances) do |date, attendances|
+    = date
+    - attendances.each do |attendance|
+      div
+        = link_to "#{attendance.start_time.hour}時 #{attendance.start_time.min}分〜", edit_attendance_path(attendance), class: "#{attendance.status_color} text-white rounded-lg px-2"
