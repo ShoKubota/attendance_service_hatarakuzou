@@ -1,12 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 admin_user = User.create!(
-  name: '鈴木一郎',
+  name: '山田花子',
   email: 'example@example.com',
   password: 'password',
   password_confirmation: 'password',
@@ -25,8 +18,10 @@ admin_user = User.create!(
   )
 end
 
-1.upto(3) do |i|
-  user = User.find(i)
+ids = [User.first.id, User.second.id, User.third.id, User.fourth.id]
+
+ids.each do |id|
+  user = User.find(id)
   1.upto(10) do |i|
     approved_attendance = user.attendances.create!(
       start_time: "2022-04-#{i} 10:00:00",
