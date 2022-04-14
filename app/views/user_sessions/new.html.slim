@@ -1,2 +1,3 @@
-.flex.justify-center.items-center.min-h-screen
+.flex.flex-col.justify-center.items-center.min-h-screen
   = render 'shared/login_form', url: login_path
+  = link_to 'ゲストログインはこちらから', login_path(email: 'example@example.com', password: 'password'), method: :post

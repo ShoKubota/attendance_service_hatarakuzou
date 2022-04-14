@@ -4,5 +4,6 @@
     div
       h1.text-white.font-bold.text-4xl ハタラクゾウ
       p.text-white.mt-1.mb-4.tracking-widest シンプルイズベストな勤怠管理アプリ
-  .flex.justify-center.items-center.bg-white.w-1/2 
+  .flex.flex-col.justify-center.items-center.bg-white.w-1/2 
     = render 'shared/login_form', url: admin_login_path
+    = link_to 'ゲストログインはこちらから', admin_login_path(email: 'example@example.com', password: 'password'), method: :post
