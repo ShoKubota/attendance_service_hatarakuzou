@@ -1,0 +1,12 @@
+.section.mx-8.pt-8
+  h1.font-semibold.text-3xl.my-10 勤怠編集
+  = form_with model: @attendance, url: attendance_path(@attendance), local: true do |f|
+    = render 'admin/shared/error_messages', object: f.object
+    .flex.flex-col.m-7
+      .mb-6
+        = f.label :start_time, class: 'block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300'
+        = f.datetime_select :start_time, class: 'border-2 border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+      .mb-6
+        = f.label :end_time, class: 'block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300'
+        = f.datetime_select :end_time, class: 'border-2 border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+      = f.button '更新する', class: 'text-white bg-accent-red rounded-full hover:bg-light-red font-semibold text-base px-5 py-2.5 text-center mr-2 shadow-md cursor-pointer w-1/4'
