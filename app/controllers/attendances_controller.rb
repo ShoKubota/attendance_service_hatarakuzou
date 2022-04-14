@@ -41,7 +41,13 @@ class AttendancesController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    if @attendance.user_id == current_user.id
+      @attendance.destroy!
+      flash[:success] = '勤怠を削除しました！'
+      redirect_to attendances_path
+    end
+  end
 
   private
 
