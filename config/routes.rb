@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :attendances, only: %i[index show] do
+    resources :attendances, only: %i[index show destroy] do
       collection do
         get 'unapproved'
       end
