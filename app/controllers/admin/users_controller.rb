@@ -5,7 +5,9 @@ class Admin::UsersController < Admin::BaseController
     @users = User.page(params[:page])
   end
 
-  def show; end
+  def show
+    @attendances = @user.attendances
+  end
 
   def new
     @user = User.new
